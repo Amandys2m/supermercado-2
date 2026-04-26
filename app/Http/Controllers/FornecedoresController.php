@@ -30,4 +30,8 @@ class FornecedoresController extends Controller
 
         $fornecedor->save();
     }
+    function excluir($id){
+        $fornecedor = Fornecedor::findOrFail($id);
+        $fornecedor->delete();
+    }
 }
